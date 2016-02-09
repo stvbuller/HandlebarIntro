@@ -1,0 +1,24 @@
+{
+  "name": "handlebar_intro",
+  "version": "1.0.0",
+  "description": "Class 14.1, introduction to handlebar and class problems",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stvbuller/HandlebarIntro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stvbuller/HandlebarIntro/issues"
+  },
+  "homepage": "https://github.com/stvbuller/HandlebarIntro#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  }
+}
