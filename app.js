@@ -14,9 +14,14 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
  
 
- app.get('/', function (req, res) {
-
-    res.render('home', data);
+ app.get('/:flavor', function (req, res) {
+    var flavor = req.params.flavor;
+    console.log(flavor);
+    for (var i = 0; i < icecreams.length; i++){
+      if (flavor === icecreams[i].name) {
+        res.render('home');
+      }
+    }
 });
 
   
