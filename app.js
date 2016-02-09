@@ -2,10 +2,7 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var app = express();
 
-
-
 var PORT = process.env.NODE_ENV || 8090;
-
 
 var icecreams = [ {name: 'vanilla', price: 10, awesomeness: 3},
  {name: 'chocolate', price: 4, awesomeness: 8},
@@ -17,30 +14,11 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
  
 
- app.get('/vanilla', function (req, res) {
+ app.get('/', function (req, res) {
 
-    res.render('iceCream', data);
+    res.render('home', data);
 });
 
-// app.get('/vanilla', function (req, res) {
-//     res.render('home');
-// });
-
-// app.get('/chocolate', function (req, res) {
-//     res.render('home');
-// });
-
-// app.get('/banana', function (req, res) {
-//     res.render('home');
-// });
-  
-// app.get('/greentea', function (req, res) {
-//     res.render('home');
-// });
-
-// app.get('/jawbreakers', function (req, res) {
-//     res.render('home');
-// });
   
 
 app.listen(PORT, function() {
