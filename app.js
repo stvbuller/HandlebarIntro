@@ -10,7 +10,7 @@ var icecreams = [ {name: 'vanilla', price: 10, awesomeness: 3},
   {name: 'greentea', price: 5, awesomeness: 7}, 
   {name: 'jawbreakers', price: 6, awesomeness: 2}, ]; 
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'parlor'}));
 app.set('view engine', 'handlebars');
  
 
@@ -19,7 +19,7 @@ app.set('view engine', 'handlebars');
     console.log(flavor);
     for (var i = 0; i < icecreams.length; i++){
       if (flavor === icecreams[i].name) {
-        res.render('home');
+        res.render('taste', icecreams[i]);
       }
     }
 });
